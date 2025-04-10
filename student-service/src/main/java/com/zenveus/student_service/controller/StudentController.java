@@ -23,6 +23,7 @@ public class StudentController {
 
     @GetMapping
     public ResponseEntity<?> fetchStudents(){
+        System.out.println("Fetching all students");
         return studentService.fetchStudents();
     }
     @PostMapping
