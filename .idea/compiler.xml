@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service-registry" />
         <module name="cloud-gateway" />
-        <module name="auth-service" />
       </profile>
       <profile name="Annotation profile for school-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -17,21 +16,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
         </processorPath>
         <module name="school-service" />
-      </profile>
-      <profile name="Annotation profile for student-service" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-        </processorPath>
         <module name="student-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth-service" target="17" />
       <module name="cloud-gateway.main" target="17" />
       <module name="cloud-gateway.test" target="17" />
     </bytecodeTargetLevel>

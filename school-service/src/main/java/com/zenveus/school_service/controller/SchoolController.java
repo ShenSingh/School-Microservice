@@ -14,8 +14,9 @@ public class SchoolController {
     @Autowired
     private SchoolService schoolService;
 
-    @PostMapping
-    public School addSchool(@RequestBody School school){
+    @PostMapping("/add")
+    public School addSchool( @RequestBody School school){
+        System.out.println("Adding school: ");
         return schoolService.addSchool(school);
     }
     @GetMapping
